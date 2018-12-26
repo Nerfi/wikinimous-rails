@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
 
   def create
 
-    @article = Article.new(articles_params)
+    @article = Article.new(article_params)
     @article.save
 
     redirect_to articles_path
@@ -36,6 +36,14 @@ class ArticlesController < ApplicationController
     @article.update(article_params)
     #redirect the user to the index
     redirect_to articles_path(@article)
+
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    redirect_to articles_path
 
   end
 
