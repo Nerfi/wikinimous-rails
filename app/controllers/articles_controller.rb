@@ -31,9 +31,19 @@ class ArticlesController < ApplicationController
   end
 
   def update
+
+    @article = Article.find(params[:id])
     @article.update(article_params)
     #redirect the user to the index
-    redirect_to articles_path
+    redirect_to articles_path(@article)
+
+  end
+
+
+  private
+
+  def article_params
+    params.require(:article).permit(:title,:content)
 
   end
 
