@@ -1,2 +1,11 @@
+<%= link_to edit_path(@article.id), class: 'pull-right btn btn-default' do %>
+<i class="fa fa-pencil"></i> Edit this article
+<% end %>
+<!-- ponemos en la linea numero 2 'pull-right' para que el 'btn' se desplaze a la esquina derecha -->
+
 <h1><%=@article.title %></h1>
 <p><%= @article.content %></p>
+
+<%= link_to articles_path do %>
+<i class="fa fa-history"></i> Bakc to list
+<% end %>
