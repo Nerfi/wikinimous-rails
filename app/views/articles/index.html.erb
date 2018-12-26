@@ -5,11 +5,9 @@
 <ul><%= article.content %></ul>
 </ul>
 <%= link_to "add a new article", new_path %>
+<br>
+<%= link_to 'Delete', article_path(@articles),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
 <% end%>
-
-<%= link_to 'Delete', article_path(article),
-method: :delete,
-data: { confirm: "Are you sure buddy?"
-
-} %>
 
