@@ -5,7 +5,7 @@
 <li><%= link_to article.title, article_path(article) %></li>
 <ul><%= article.content %></ul>
 </ul>
-<%= link_to "add a new article", new_path %>
+
 
 <%= link_to 'Delete', article_path(@articles), class: 'pull-left btn btn-default',
       method: :delete,
