@@ -13,3 +13,12 @@
 <% end %>
 
 
+<!-- LEWAGON SOLUTION -->
+<% @articles.each do |article| %>
+  <article>
+    <h2><%= link_to article.title, article %></h2>
+    <%= article.content[0..100] %>
+  </article>
+<% end %>
+
+<!-- SUPONGO QUE LINEA 20 ES PARA QUE UNA VEZ ABIERTO EL LINK DEL TITLE, SE DESPLIEGUE MAS INFO COMO EN EL EJEMPLO DE LA WEB -->

@@ -11,3 +11,11 @@
 
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
+
+
+<!-- LEWAGON SOLUTION -->
+<%= bootstrap_form_for(@article, class: 'form') do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :content, data: { editor: 'markdown' }, rows: 10 %>
+  <%= f.submit %>
+<% end %>

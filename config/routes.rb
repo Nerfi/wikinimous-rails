@@ -20,3 +20,13 @@ Rails.application.routes.draw do
    delete 'articles/:id', to: 'articles#destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+
+#LEWAGON SOLUTION
+
+Rails.application.routes.draw do
+  resources :totos # wtf? what is that?
+
+  resources :articles
+
+  root to: 'articles#index'
+end
